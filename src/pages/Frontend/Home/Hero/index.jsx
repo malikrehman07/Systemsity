@@ -2,10 +2,12 @@ import React, { useEffect } from 'react'
 import { Button, Col, Image, Row, Typography } from 'antd'
 import { MdArrowOutward } from 'react-icons/md'
 import AOS from 'aos';
+import { useNavigate } from 'react-router-dom';
 
 const { Title, Paragraph } = Typography
 
 const Hero = () => {
+    const navigate = useNavigate()
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
     }, []);
@@ -32,7 +34,7 @@ const Hero = () => {
                                     <Paragraph className='text-white' >Skilled Staff</Paragraph>
                                 </Col>
                             </Row>
-                            <Button type='primary' variant='solid' size='large' shape='round' onClick={() => navigate('/compaigns')} style={{ fontSize: '23px', fontWeight: '600' }} className='py-4' >Our Services <MdArrowOutward /></Button>
+                            <Button type='primary' variant='solid' size='large' shape='round' onClick={() => navigate('/contact')} style={{ fontSize: '23px', fontWeight: '600' }} className='py-4' >Our Services <MdArrowOutward /></Button>
                         </Col>
                         <Col xs={{ span: 24, order: 1 }} sm={{ span: 24, order: 1 }} md={{ span: 12, order: 2 }} lg={{ span: 12, order: 2 }} className='h-100 my-2 '   >
                             <Image src='https://res.cloudinary.com/djpvxvokp/image/upload/v1762361145/Hero_ol55p3.svg' alt='charity' preview={false} className='img-fluid ' style={{ maxHeight: '700px' }} />

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
+import '@ant-design/v5-patch-for-react-19';
 import './App.scss'
 import Routes from './pages/Routes.jsx';
 import { ConfigProvider } from 'antd';

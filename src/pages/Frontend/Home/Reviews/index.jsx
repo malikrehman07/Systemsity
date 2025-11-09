@@ -15,7 +15,7 @@ useEffect(() => {
                         <Title level={1} className='text-secondary' >Our Happy Customers</Title>
                     </Col>
                 </Row >
-                <Row gutter={[24, 24]} justify="center" className="mt-5" data-aos="fade-up" data-aos-delay="200" >
+                <Row gutter={[24, 24]} justify="center" className="mt-5" >
                     {[
                         {
                             name: 'Alice K',
@@ -61,7 +61,7 @@ useEffect(() => {
                         }
 
                     ].map((review, index) => (
-                        <Col xs={24} sm={24} md={12} lg={8} key={index}>
+                        <Col xs={24} sm={24} md={12} lg={8} key={index} data-aos="fade-up" data-aos-delay={index * 100} >
                             <Card hoverable className="rounded-5 shadow text-center">
                                 <Image
                                     src={review.image}

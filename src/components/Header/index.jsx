@@ -1,10 +1,11 @@
 import React from 'react'
 import { Button, Image } from 'antd'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { MdArrowOutward } from "react-icons/md";
 import systemsity from '../../assets/systemsity.svg';
 
 const Header = () => {
+    const navigate = useNavigate()
     return (
         <header>
             <nav className="navbar navbar-expand-lg bg-secondary shadow py-2" style={{ fontWeight: '600' }} >
@@ -24,9 +25,12 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link to='/contact' className="nav-link active" aria-current="page">Contact</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to='/careers' className="nav-link active" aria-current="page">Careers</Link>
+                            </li>
                         </ul>
                         <div className="d-flex">
-                            <Button type='primary' variant='solid' size='large' shape='round' style={{ backgroundColor: '#130D29', borderColor: '#130D29' }} >Contact Us<MdArrowOutward /></Button>
+                            <Button type='primary' variant='solid' size='large' shape='round' style={{ backgroundColor: '#130D29', borderColor: '#130D29' }} onClick={()=>navigate('/contact')} >Contact Us<MdArrowOutward /></Button>
                         </div>
                     </div>
                 </div>

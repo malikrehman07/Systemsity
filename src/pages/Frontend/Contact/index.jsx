@@ -7,8 +7,8 @@ import axios from "axios";
 const { Title, Paragraph } = Typography;
 
 const Contact = () => {
-    const [form] = Form.useForm();
-    const [loading, setLoading] = useState(false)
+  const [form] = Form.useForm();
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -17,7 +17,7 @@ const Contact = () => {
     });
   }, []);
 
-  const handleSubmit = async(values) => {
+  const handleSubmit = async (values) => {
     setLoading(true);
     try {
       await axios.post("https://api.systemsity.tech/contact", values);
@@ -49,8 +49,8 @@ const Contact = () => {
             <Card hoverable className="p-6 shadow-lg text-center rounded-5">
               <EnvironmentOutlined className="text-4xl text-blue-500 mb-3" />
               <Title level={4}>Our Address</Title>
-              <Paragraph type="secondary">
-                123 Main Street, Faisalabad, Pakistan
+              <Paragraph type="secondary" style={{ height: '30px' }} >
+                P6 Nashatabad, Near PSO Pump,Faisalabad
               </Paragraph>
             </Card>
           </div>
@@ -61,7 +61,7 @@ const Contact = () => {
             <Card hoverable className="p-6 shadow-lg text-center rounded-5">
               <PhoneOutlined className="text-4xl text-blue-500 mb-3" />
               <Title level={4}>Call Us</Title>
-              <Paragraph type="secondary">+92 300 1234567</Paragraph>
+              <Paragraph type="secondary" style={{ height: '30px' }} >+92 304 8666323</Paragraph>
             </Card>
           </div>
         </Col>
@@ -71,7 +71,7 @@ const Contact = () => {
             <Card hoverable className="p-6 shadow-lg text-center rounded-5">
               <MailOutlined className="text-4xl text-blue-500 mb-3" />
               <Title level={4}>Email Us</Title>
-              <Paragraph type="secondary">support@systemsity.tech</Paragraph>
+              <Paragraph type="secondary" style={{ height: '30px' }} >support@systemsity.tech</Paragraph>
             </Card>
           </div>
         </Col>
@@ -142,7 +142,7 @@ const Contact = () => {
           Find Us On The Map
         </Title>
         <div className="rounded-5 overflow-hidden shadow-lg max-w-5xl mx-auto">
-          <iframe
+          {/* <iframe
             title="Our Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.034081796233!2d74.3587!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190f1a5fbeea7d%3A0x4c4d8a4a49fce!2sLahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1691424000000!5m2!1sen!2s"
             width="100%"
@@ -150,7 +150,14 @@ const Contact = () => {
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
-          ></iframe>
+          ></iframe> */}
+          <iframe title="Our Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54455.48459698666!2d73.05584192275998!3d31.456315715772522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x392269aeb9cee023%3A0x832a74404d8fb5fb!2sPSO!5e0!3m2!1sen!2s!4v1762719420161!5m2!1sen!2s"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"></iframe>
         </div>
       </div>
     </div>
