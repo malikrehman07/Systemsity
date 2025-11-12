@@ -42,7 +42,8 @@ const About = () => {
 
         <Row gutter={[24, 24]} justify="center">
           {[
-            { name: "Abdullah Shahzad", title: "CEO" },
+            { name: "Zaeem Zia", title: "CEO" },
+            { name: "Abdullah Shahzad", title: "Managing Director" },
             { name: "Abdul Manan", title: "Lead Graphic Designer" },
             { name: "Zayan Zia", title: "Graphic Designer" },
             { name: "Abdul Rehman", title: "MERN-Stack Developer" },

@@ -71,7 +71,7 @@ const Contact = () => {
             <Card hoverable className="p-6 shadow-lg text-center rounded-5">
               <MailOutlined className="text-4xl text-blue-500 mb-3" />
               <Title level={4}>Email Us</Title>
-              <Paragraph type="secondary" style={{ height: '30px' }} >support@systemsity.tech</Paragraph>
+              <Paragraph type="secondary" style={{ height: '30px' }} >hr@systemsity.tech</Paragraph>
             </Card>
           </div>
         </Col>
