@@ -6,6 +6,7 @@ import Contact from './Contact'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Career from './Career'
+import NoPage from './Misc/NoPage'
 
 const Frontend = () => {
     return (
@@ -16,6 +17,7 @@ const Frontend = () => {
                 <Route path='/about' element={<About />} />
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/careers' element={<Career />} />
+                <Route path='*' element={<NoPage />} />
             </Routes>
             <Footer />
         </>
